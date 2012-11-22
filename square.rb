@@ -41,7 +41,7 @@ class Grid
   attr_accessor :size, :cursor, :origin, :counter, :data_storage
 
   def initialize(size)
-    self.size = size
+    self.size = size.to_i
     calculate_origin
     self.cursor = Cursor.new(origin)
     self.counter = 1
@@ -94,7 +94,14 @@ class Grid
   	end
   end
 
-  def to_s
-  	puts self.data_storage.inspect
+  def print_matrix
+  	column_width = (self.size*self.size).to_s.length + 1
+  	format = "%#{column_width}d"
+  	(0..size-1).each do |y|
+  		(0..size-1).each do |x|
+  			print format % self.data(Coordinate.new(x,y))
+  		end
+  		puts # new line
+  	end
   end
 end

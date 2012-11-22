@@ -100,6 +100,13 @@ describe Grid do
 		grid.cursor.direction.should == :up
 	end
 
+	it "should fill a grid of 1x1" do
+		grid = Grid.new(1)
+		grid.fill
+
+		grid.data(Coordinate.new(0,0)).should == 1
+	end
+
 	it "should fill a grid of 2x2" do
 		grid = Grid.new(2)
 		grid.fill

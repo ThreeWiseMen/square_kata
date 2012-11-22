@@ -1,12 +1,12 @@
 Square Kata
 -----------
 
-This is an Object Oriented solution to the Square kata written in the Ruby programming language.
+This is one example of a test-driven Object Oriented emergent solution to the Square kata written in the Ruby programming language.
 
 The Square kata is as follows:
 
-Take a parameter n. If n is a perfect square (ie. sqrt(n) is an int) then output a matrix sqrt(n) x sqrt(n) in size, which contains the sequence 1..n drawn
-spirally in the matrix counter-clockwise. Here are a few illustrative examples:
+Take a parameter n. If n is a perfect square (ie. sqrt(n) is an integer) then output a matrix sqrt(n) x sqrt(n) in size, which contains the sequence 1..n drawn
+spirally from the centre of the matrix counter-clockwise. Here are a few illustrative examples:
 
 Input:  1
 Output: 1
