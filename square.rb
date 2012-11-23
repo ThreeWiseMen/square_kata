@@ -97,11 +97,9 @@ class Grid
   def print_matrix
   	column_width = (self.size*self.size).to_s.length + 1
   	format = "%#{column_width}d"
-  	(0..size-1).each do |y|
-  		(0..size-1).each do |x|
-  			print format % self.data(Coordinate.new(x,y))
-  		end
-  		puts # new line
-  	end
+    output = self.data_storage.collect do |row|
+      row.collect { |col| format % col }.join
+    end.join "\n"
+    puts output
   end
 end
